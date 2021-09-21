@@ -1,5 +1,4 @@
-// ----------------------------------------------------------------------------
-// --------------------------------- ДОСТУПЫ ----------------------------------
-// ----------------------------------------------------------------------------
-
-export default []
+export default {
+    countryConteiner: document.querySelector(".countryConteiner"),
+    countryName: document.querySelector(".countryName"),
+}
