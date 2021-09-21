@@ -15,9 +15,9 @@ refs.countryName.addEventListener('input', debounce(getCountry, 500));
 
 function getCountry(e){
     e.preventDefault();
-  fetch.fetchCountry(e.target.value).then(makeCountryCard).catch(err => console.log(onError));
+    console.log(e)
+  fetch.fetchCountry(e.target.value).then(makeCountryCard).catch(onError);
 } 
-
 
     function makeCountryCard(country){
         if(country.status === 404){
@@ -30,15 +30,19 @@ function getCountry(e){
             return
         } else if (country.length > 1){
             refs.countryConteiner.innerHTML = countriesList(country)
-           return
-        }
+           return 
+        } 
+        else if (country.data === null){
+            refs.countryConteiner.innerHTML = ''
+           return}
         refs.countryConteiner.innerHTML = countryTamplate(...country)
     };
 
-function onError(error){
-    refs.countryConteiner.innerHTML = ''
-    error({text:`Oops, samething went wrong`})
-    return
+   
+function onError(err){
+    refs.countryConteiner.innerHTML = '';
+    alert({text:`Oops, samething went wrong`});
+    return refs.countryConteiner.innerHTML = ''
 }
 
 

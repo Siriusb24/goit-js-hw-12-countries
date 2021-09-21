@@ -21,7 +21,7 @@ body{
   margin-right: auto;
   margin-left: auto;
   width: 700px;
-  height: 350px;
+  min-height: 400px;
   display: flex;
   background: rgba(16, 194, 69, 0.4);
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -80,10 +80,41 @@ body{
   color: rgb(0, 0, 0);
 }
 
-li::before{
+.country-list::before{
   position: absolute;
   content: url('../images/language.svg');
   width: 25px;
   height: 25px;
   left: 5%;
+}
+
+.country-tumb{
+  margin-top: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+  display: flex;
+  background: rgba(16, 194, 69, 0.4);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+
+
+.countries-list{
+  list-style: none;
+}
+
+
+.countries-item{
+  position: relative;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+
+.countries-item::before{
+  position: absolute;
+  right: 100%;
+  content: url("../images/globe.svg");
+  width: 20px;
+  height: 20px;
 }
