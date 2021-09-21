@@ -1,12 +1,14 @@
-<article>
-<h1>{{name}}</h1>
-<p>Capital:{{capital}}</p>
-<p>Population:{{population}}</p>
-<p>languages:</p>
-<ul>
+<article class = "country-box">
+<div class="country-conteiner">
+<h1 class='country-title'>{{name}}</h1>
+<p class = 'country-item'>Capital:{{capital}}</p>
+<p class = 'country-item'>Population:{{population}} mln</p>
+<p class = 'country-item'>languages:</p>
+<ul class = 'country-list'>
     {{#each languages}}
-    <li>{{this.name}}</li>
+    <li class = 'country-list__item'>{{this.name}}</li>
     {{/each}}
 </ul>
-<img src={{flag}} alt="{{name}}">
+</div>
+<img src={{flag}} alt="{{name}}" class="country-img">
 </article>

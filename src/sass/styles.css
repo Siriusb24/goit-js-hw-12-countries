@@ -7,3 +7,83 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+body{
+  margin: auto;
+  width: 1200px;
+  background-image: url(../images/planet.jpg);
+}
+
+.country-box{
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 700px;
+  height: 350px;
+  display: flex;
+  background: rgba(16, 194, 69, 0.4);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+
+.country-conteiner{
+  display: inline-block;
+  padding-left: 40px;
+  width: 260px;
+  height: 200px;
+}
+
+.country-img{
+  padding-right: 40px;
+  width: 400px;
+  height: 200px;
+}
+
+.countryName{
+  position: absolute;
+  left: 39%;
+  top: 25%;
+  width: 260px;
+  height: 50px;
+  background-color: rgba(4, 181, 235, 0.938);
+  border-color: rgb(17, 85, 189);
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-weight: bold;
+  font-size: 25px;
+  color: rgb(6, 84, 90);
+}
+
+.countryName::placeholder{
+  font-weight: bold;
+  font-size: 25px;
+  color: rgb(7, 128, 184)
+}
+
+.country-title{
+  font-weight: bold;
+  font-size: 25px;
+  color: rgb(7, 128, 184);
+}
+.country-item{
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.country-list{
+  position: relative;
+  list-style: none;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+li::before{
+  position: absolute;
+  content: url('../images/language.svg');
+  width: 25px;
+  height: 25px;
+  left: 5%;
+}
