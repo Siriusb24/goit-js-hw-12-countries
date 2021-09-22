@@ -12,10 +12,10 @@ import '@pnotify/core/dist/BrightTheme.css'
 defaultModules.set(PNotifyMobile, {})
 
 refs.countryName.addEventListener('input', debounce(getCountry, 500));
+window.addEventListener('click', getToCountry);
 
 function getCountry(e){
     e.preventDefault();
-    console.log(e)
   fetch.fetchCountry(e.target.value).then(makeCountryCard).catch(onError);
 } 
 
@@ -32,9 +32,6 @@ function getCountry(e){
             refs.countryConteiner.innerHTML = countriesList(country)
            return 
         } 
-        else if (country.data === null){
-            refs.countryConteiner.innerHTML = ''
-           return}
         refs.countryConteiner.innerHTML = countryTamplate(...country)
     };
 
@@ -42,7 +39,14 @@ function getCountry(e){
 function onError(err){
     refs.countryConteiner.innerHTML = '';
     alert({text:`Oops, samething went wrong`});
-    return refs.countryConteiner.innerHTML = ''
+    return 
 }
 
+
+function getToCountry(e){
+    e.preventDefault();
+if(e.target.nodeName === "LI"){
+countryName = e.target.value
+}
+}
 
