@@ -22,7 +22,7 @@ function getCountry(e){
     function makeCountryCard(country){
         if(country.status === 404){
             refs.countryConteiner.innerHTML = ''
-            error({text: `Incorrect search query entered. Country not found!`});
+            error({text: `Incorrect search query entered. Country not found!!`});
             return
         } else if (country.length > 10){
             refs.countryConteiner.innerHTML = ''
